@@ -1,4 +1,4 @@
-class EmployeePayrollData {
+class PersonInfo {
     /**
      * setter and getter methods
      * validating the user inputs using regular expression

@@ -66,12 +66,12 @@ class PersonInfo {
 
     
 
-   /* toString() {
+    toString() {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const empDate = !this.start_date ? "undefined" :
                         this.start_date.toLocaleDateString("en-US", options);
         return 'Name = ' + this.name + ", Gender = " + this.gender + ", ProfilePic = " +this.profilePic
                     + ", Department = " + this.department + ", Salary = " + this.salary +
                         ", StartDate = " + empDate + ", Note = " +this.note;
-    }*/
+    }
 }

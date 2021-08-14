@@ -1,52 +1,65 @@
 <!--
-    Ability to view Employee Payroll details in a Tabular Format from JSON Object. 
-        - Use Template Literals to populate the inner HTML. 
-        - Set the Table Data values from the JSON Object.
-        - Make sure to create an HTML to showcase each Department.
-        - Make sure to use the for loop to populate multiple employee payroll information.
+    Ability to view Employee Payroll details from Local Storage.
+        - Retrieve Employee Payroll Data from Local Storage and assign  to variable that has a scope across js file 
+          and display the number in the Header Text.
+        - Note the element with name attribute is changed to id as name is deprecated.
+        - Note: all attributes of Employee Payroll data starts with underscore (i.e. _).
+        - This is because Employee Payroll Class when uses getters and setters for its attributes, since the getters and setters are using
+          proper attribute name, the class properties are automatically created with underscore.
+        - Hence when JSON.stringify is called on the Employee Payroll Object, the JSON Attributes starts with underscore.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/home.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
-            rel="stylesheet">
-        <title>Employee Payroll App</title>
-        <script defer src="/js/home.js"></script>
-    </head>
-    <body>
-        <!--UC 14-->
-        <header class="header-content header">
-            <div class="logo-content">
-                <img src="/assets/images/logo.png" alt="">
-                <div>
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/home.css">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0.600;1,500&display=swap"
+          rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <script type="text/javascript" src="/js/home.js"> </script>
+     <script type="text/javascript" src="/js/siteProperties.js"></script>
+     <script type="text/javascript" src="/js/utility.js"></script>
+     <title>Home page</title>
+</head>
+
+<body>
+     <header class="header-content header">
+          <div class="logo-content" onclick="location.href='./EmployeePayroll.html'">
+               <img src="/assets/images/logo.png" alt="Logo">
+               <div>
                     <span class="emp-text">EMPLOYEE</span><br>
                     <span class="emp-text emp-payroll">PAYROLL</span>
-                </div>
-            </div>
-        </header>
-        <!--UC 15-->
-        <div class="main-content">
-            <div class="header-content">
-                <div class="emp-detail-text">
+               </div>
+          </div>
+     </header>
+
+
+     <div class="main-content">
+          <div class="header-content sub-main-content">
+               <div class="emp-detail-text">
                     Employee Details
-                    <div class="emp-count">1</div>
-                </div>
-                <a href="/Html/Employeepayroll.html" class="add-button">
-                <img src="/assets/icons/add-24px.svg" alt="">Add User</a>
-            </div>
-            <!--UC 16-->
-            <div class="table-main">
-                <table id ="display" class="table">
-                </table>  
-            </div>
-        </div> 
-        <script src ="/js/home.js"></script> 
-    </body>
+                    <div class="emp-count">0</div>
+               </div>
+               <div onclick="location.href='/Html/Employeepayroll.html'" class="add-button">
+                    <div class="plus-icon">
+                         <img src="/assets/icons/add-24px.svg" alt="Add User Logo">
+                    </div>
+                    <div>Add User</div>
+               </div>
+          </div>
+
+          <div class="table-main">
+               <table class="table" id="display">
+               </table>
+          </div>
+
+     </div>
+
+
+</body>
+
 </html>
-         

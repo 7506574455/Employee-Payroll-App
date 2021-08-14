@@ -1,7 +1,7 @@
 {
   "employee": [
     {
-      "name": "mohit kumar new",
+      "name": "sanket kumar",
       "gender": "male",
       "departMent": [
         "HR"
@@ -10,7 +10,7 @@
       "startDate": "1 Jan 2020",
       "notes": "",
       "id": 1604589551457,
-      "profileUrl": "../assets/profile-images/Ellipse 1.png"
+      "profileUrl": "../assets/profile-images/Ellipse 3.png"
     },
     {
       "name": "mohit kumar test",
@@ -22,7 +22,7 @@
       "startDate": "1 Jan 2020",
       "notes": "",
       "id": 1604589594363,
-      "profileUrl": "../assets/profile-images/Ellipse 1.png"
+      "profileUrl": "../assets/profile-images/Ellipse 8.png"
     },
     {
       "name": "mohit",
@@ -37,16 +37,16 @@
       "profileUrl": "../assets/profile-images/Ellipse -3.png"
     },
     {
-      "name": "test",
-      "gender": "male",
+      "name": "bhaktee",
+      "gender": "female",
       "departMent": [
         "HR"
       ],
-      "salary": "30000",
+      "salary": "40000",
       "startDate": "1 Jan 2020",
       "notes": "",
       "id": 1604589731061,
-      "profileUrl": "../assets/profile-images/Ellipse -3.png"
+      "profileUrl": "../assets/profile-images/Ellipse -1.png"
     }
   ]
 }

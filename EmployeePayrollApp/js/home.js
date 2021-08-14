@@ -30,12 +30,12 @@ const createInnerHtml = () => {
                 ${getDeptHtml(empPayrollData._department)}
             </td>
             <td>${empPayrollData._salary}</td>
-            <td>${empPayrollData._start_date}</td>
+            <td>${stringifyDate(empPayrollData._start_date)}</td>
             <td>
-                <img id="1" onclick="remove(this)" alt="delete"
-                            src="../assets/icons/delete-black-18dp.svg">
-                <img id="1" onclick="update(this)" alt="edit"
-                            src="../assets/icons/create-black-18dp.svg">           
+                <img id="${empPayrollData._id}" onclick="remove(this)" 
+                            src="../assets/icons/delete-black-18dp.svg" alt="delete">
+                <img id="${empPayrollData._id}" onclick="update(this)" 
+                            src="../assets/icons/create-black-18dp.svg" alt="edit">           
             </td>
         </tr>
         `;
@@ -62,7 +62,7 @@ const createEmployeePayrollJSON = () => {
             _salary: '250000',
             _start_date: '01 Nov 2020',
             _note: '',
-            _profilePic: '../assets/profile-images/Ellipse 3.png'
+            _profilePic: '../assets/profile-images/Ellipse 1.png'
         },
         {
             _name: 'Sanket Lalge',
@@ -73,8 +73,20 @@ const createEmployeePayrollJSON = () => {
             _salary: '500000',
             _start_date: '29 Oct 2019',
             _note: '',
-            _profilePic: '../assets/profile-images/Ellipse -1.png'
+            _profilePic: '../assets/profile-images/Ellipse -3.png'
         }
     ]
     return empPayrollListLocal;
+}
+
+const remove = (node) => {
+    let empPayrollData = empPayrollList.find(empData => empData._id == node.id);
+    if( !empPayrollData ) return;
+    const index = empPayrollList
+                    .map( empData => empData._id )
+                    .indexOf(empPayrollData._id);
+    empPayrollList.splice(index, 1);
+    localStorage.setItem("EmployeePyrollList", JSON.stringify(empPayrollList));
+    document.querySelector(".emp-count").textContent = empPayrollList.length;
+    createInnerHtml();
 }

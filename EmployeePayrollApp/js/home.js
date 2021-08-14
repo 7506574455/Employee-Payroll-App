@@ -1,15 +1,24 @@
+let empPayrollList;
 window.addEventListener('DOMContentLoaded', (event) => {
+    empPayrollList = getEmployeePayrollDataFromStorage();
+    document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
+    localStorage.removeItem('editEmp');
 });
 
+const getEmployeePayrollDataFromStorage = () => {
+    return localStorage.getItem('EmployeePayrollList') ?
+                JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
+}
 
 const createInnerHtml = () => {
+    if (empPayrollList.length == 0) return;
     const headerHtml = "<th></th><th>Name</th><th>Gender</th>" +
                     "<th>Department</th><th>Salary</th><th>Start Date</th>" +
                     "<th>Actions</th>";
     let innerHtml = `${headerHtml}`;
-    let empPayrollList = createEmployeePayrollJSON();  
-    for ( const empPayrollData of empPayrollList) {
+    //let empPayrollList = createEmployeePayrollJSON();  
+    for ( const empPayrollData of empPayrollList ) {
         innerHtml = `${innerHtml}
         <tr>
             <td>
@@ -45,7 +54,7 @@ const getDeptHtml = (deptList) => {
 const createEmployeePayrollJSON = () => {
     let empPayrollListLocal = [
         {
-            _name: 'Bhaktee sampada ',
+            _name: 'Bhaktee Sampada',
             _gender: 'Female',
             _department: [
                 'Engineering', 'HR'
@@ -53,7 +62,7 @@ const createEmployeePayrollJSON = () => {
             _salary: '250000',
             _start_date: '01 Nov 2020',
             _note: '',
-            _profilePic: '../assets/profile-images/Ellipse 1.png'
+            _profilePic: '../assets/profile-images/Ellipse 3.png'
         },
         {
             _name: 'Sanket Lalge',
@@ -64,7 +73,7 @@ const createEmployeePayrollJSON = () => {
             _salary: '500000',
             _start_date: '29 Oct 2019',
             _note: '',
-            _profilePic: '../assets/profile-images/Ellipse -3.png'
+            _profilePic: '../assets/profile-images/Ellipse -1.png'
         }
     ]
     return empPayrollListLocal;

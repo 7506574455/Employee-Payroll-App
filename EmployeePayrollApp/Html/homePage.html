@@ -1,5 +1,6 @@
 <!--
-    Ability to create a Header Section with Employee Details and Add Employee button
+    Ability to view Employee Payroll details in a Tabular Format from JS File using Template Literals. 
+    - Use Template literal ES6 feature
 -->
 
 <!DOCTYPE html>
@@ -31,11 +32,18 @@
             <div class="header-content">
                 <div class="emp-detail-text">
                     Employee Details
-                    <div class="emp-count">0</div>
+                    <div class="emp-count">1</div>
                 </div>
                 <a href="/Html/Employeepayroll.html" class="add-button">
                 <img src="/assets/icons/add-24px.svg" alt="">Add User</a>
             </div>
-        </div>
+            <!--UC 16-->
+            <div class="table-main">
+                <table id ="display" class="table">
+                </table>  
+            </div>
+        </div> 
+        <script src ="/js/home.js"></script> 
     </body>
 </html>
+         

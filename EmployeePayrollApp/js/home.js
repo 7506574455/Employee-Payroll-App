@@ -54,7 +54,7 @@ const getDeptHtml = (deptList) => {
 const createEmployeePayrollJSON = () => {
     let empPayrollListLocal = [
         {
-            _name: 'Bhaktee Sampada',
+            _name: 'Bhaktee Sampada ',
             _gender: 'Female',
             _department: [
                 'Engineering', 'HR'
@@ -89,4 +89,11 @@ const remove = (node) => {
     localStorage.setItem("EmployeePyrollList", JSON.stringify(empPayrollList));
     document.querySelector(".emp-count").textContent = empPayrollList.length;
     createInnerHtml();
+}
+
+const update = (node) => {
+    let empPayrollData = empPayrollList.find((empData) => empData._id == node.id);
+    if (!empPayrollData) return;
+    localStorage.setItem("editEmp", JSON.stringify(empPayrollData));
+    window.location.replace(site_properties.add_emp_payroll_page);
 }

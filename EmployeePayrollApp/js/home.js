@@ -54,7 +54,7 @@ const getDeptHtml = (deptList) => {
 const createEmployeePayrollJSON = () => {
     let empPayrollListLocal = [
         {
-            _name: 'Bhaktee Sampada ',
+            _name: 'Sayani Koley',
             _gender: 'Female',
             _department: [
                 'Engineering', 'HR'
@@ -65,7 +65,7 @@ const createEmployeePayrollJSON = () => {
             _profilePic: '../assets/profile-images/Ellipse 1.png'
         },
         {
-            _name: 'Sanket Lalge',
+            _name: 'Suvadeep Das',
             _gender: 'Male',
             _department: [
                 'Engineering', 'Finance'

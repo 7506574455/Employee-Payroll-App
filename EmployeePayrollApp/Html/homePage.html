@@ -1,55 +1,53 @@
+<!--
+    Ability to Update an Employee Payroll details. 
+        - Firstly Find the employee whose details need to be updated.
+        - Update the Local Storage with the Employee Payroll to be Updated.
+        - Redirect to Employee Payroll Page - In Employee Payroll Page read the Employee Payroll Details from Local Storage and populate the form.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/home.css">
-     <link href="https://fonts.googleapis.com/css?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0.600;1,500&display=swap"
-          rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-     <script type="text/javascript" src="/js/home.js"> </script>
-     <script type="text/javascript" src="/js/siteProperties.js"></script>
-     <script type="text/javascript" src="/js/utility.js"></script>
-     <script type="text/javascript" src="/js/validate.js"></script>
-     <title>Home page</title>
-</head>
-
-<body>
-     <header class="header-content header">
-          <div class="logo-content" onclick="location.href='/Html/homePage.html'">
-               <img src="/assets/images/logo.png" alt="Logo">
-               <div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+            rel="stylesheet">
+        <title>Employee Payroll App</title>
+        <script defer src="/js/home.js"></script>
+    </head>
+    <body>
+        <!--UC 14-->
+        <header class="header-content header">
+            <div class="logo-content">
+                <img src="/assets/images/logo.png" alt="">
+                <div>
                     <span class="emp-text">EMPLOYEE</span><br>
                     <span class="emp-text emp-payroll">PAYROLL</span>
-               </div>
-          </div>
-     </header>
-
-
-     <div class="main-content">
-          <div class="header-content sub-main-content">
-               <div class="emp-detail-text">
+                </div>
+            </div>
+        </header>
+        <!--UC 15-->
+        <div class="main-content">
+            <div class="header-content">
+                <div class="emp-detail-text">
                     Employee Details
                     <div class="emp-count">10</div>
-               </div>
-               <div onclick="location.href='/Html/homePage.html'" class="add-button">
-                    <div class="plus-icon">
-                         <img src="/assets/icons/add-24px.svg" alt="Add User Logo">
-                    </div>
-                    <div>Add User</div>
-               </div>
-          </div>
-
-          <div class="table-main">
-               <table class="table" id="display">
-               </table>
-          </div>
-
-     </div>
-
-
-</body>
-
+                </div>
+                <a href="/Html/Employeepayroll.html" class="add-button">
+                <img src="/assets/icons/add-24px.svg" alt="">Add User</a>
+            </div>
+            <!--UC 16-->
+            <div class="table-main">
+                <table id ="display" class="table">
+                </table>  
+            </div>
+        </div> 
+        <script src ="/js/home.js"></script> 
+        <script src="/js/utility.js"></script>
+        <script src="/js/siteProperties.js"></script>
+        <script src="/js/EmployeePayrollData.js"></script>
+    </body>
 </html>
